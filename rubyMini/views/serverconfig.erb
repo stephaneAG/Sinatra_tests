@@ -1,0 +1,23 @@
+<div class="hero-unit">
+	<h3> > session vars test: simple version </h3>
+	<h2> <%= @title %> </h2>
+</div>
+
+<div class="hero-unit">
+	<h2> SSH configuration: </h2>
+	<p> <strong> Login: </strong> <%= @ssh_session_login %> </p>
+	<p> <strong> Password: </strong> <%= @ssh_session_passwd %> </p>
+	<p> <strong> Current remote host Ip adress: </strong> <%= @ssh_session_remote_host_ip %> </p>
+</div>
+
+<div class="hero-unit">
+	<h2> Manage SSH configuration: </h2>
+	<p> Use this form to update your SSH connection preferences </p>
+	<form action="/server/ssh" method="post" accept-charset="utf-8">
+		<input type="text" name="loginssh" placeholder="Login">
+		<input type="text" name="passwdssh" placeholder="Password">
+		<input type="text" name="remotehostip" placeholder="Remote host IP adress">
+		<input type="submit" value="Update">
+	</form>
+	
+</div>
